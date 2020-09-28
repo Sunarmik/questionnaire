@@ -1,0 +1,269 @@
+{
+  "items": [
+    {
+      "tags": [
+        "firebase",
+        "flutter",
+        "firebase-authentication"
+      ],
+      "owner": {
+        "reputation": 47,
+        "user_id": 7185301,
+        "user_type": "registered",
+        "profile_image": "https://lh5.googleusercontent.com/-4ZMmGGJP9Fc/AAAAAAAAAAI/AAAAAAAAASQ/6-z-F4z4lGM/photo.jpg?sz=128",
+        "display_name": "arjun more",
+        "link": "https://stackoverflow.com/users/7185301/arjun-more"
+      },
+      "is_answered": false,
+      "view_count": 10,
+      "answer_count": 0,
+      "score": -1,
+      "last_activity_date": 1601303034,
+      "creation_date": 1601300918,
+      "last_edit_date": 1601303034,
+      "question_id": 64103514,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/64103514/in-flutter-im-getting-errror-while-sign-up-using-sign-up-operation-not-allowed-t",
+      "title": "In Flutter im getting errror while sign up using sign up operation-not-allowed The given sign-in provider is disabled for this Firebase project"
+    },
+    {
+      "tags": [
+        "javascript",
+        "firebase",
+        "firebase-realtime-database"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 12677473,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/2522957534694291/picture?type=large",
+        "display_name": "Asad Abdul Latif",
+        "link": "https://stackoverflow.com/users/12677473/asad-abdul-latif"
+      },
+      "is_answered": false,
+      "view_count": 21,
+      "answer_count": 1,
+      "score": 0,
+      "last_activity_date": 1601302973,
+      "creation_date": 1600982033,
+      "last_edit_date": 1600982739,
+      "question_id": 64054490,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/64054490/how-to-stop-duplication-in-firebase-database",
+      "title": "how to stop duplication in firebase database"
+    },
+    {
+      "tags": [
+        "firebase"
+      ],
+      "owner": {
+        "reputation": 213,
+        "user_id": 9570941,
+        "user_type": "registered",
+        "profile_image": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg?sz=128",
+        "display_name": "cs guy",
+        "link": "https://stackoverflow.com/users/9570941/cs-guy"
+      },
+      "is_answered": true,
+      "view_count": 35,
+      "accepted_answer_id": 64056160,
+      "answer_count": 2,
+      "score": 0,
+      "last_activity_date": 1601300902,
+      "creation_date": 1600992527,
+      "question_id": 64056018,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/64056018/firebase-quata-spam-attack",
+      "title": "Firebase quata spam attack"
+    },
+    {
+      "tags": [
+        "firebase",
+        "flutter"
+      ],
+      "owner": {
+        "reputation": 77,
+        "user_id": 10879428,
+        "user_type": "registered",
+        "profile_image": "https://i.stack.imgur.com/5vZSy.jpg?s=128&g=1",
+        "display_name": "Pranavan",
+        "link": "https://stackoverflow.com/users/10879428/pranavan"
+      },
+      "is_answered": false,
+      "view_count": 7,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1601300881,
+      "creation_date": 1601300881,
+      "question_id": 64103501,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/64103501/googleservicesgs-error-with-firebase-storage-5-0-0-dev-1",
+      "title": "GoogleServices(gs:\\\\) error with Firebase Storage 5.0.0 dev.1"
+    },
+    {
+      "tags": [
+        "swift",
+        "xcode",
+        "firebase",
+        "swiftui"
+      ],
+      "owner": {
+        "reputation": 967,
+        "user_id": 6134390,
+        "user_type": "registered",
+        "accept_rate": 71,
+        "profile_image": "https://i.stack.imgur.com/ja5DB.png?s=128&g=1",
+        "display_name": "Peter Pohlmann",
+        "link": "https://stackoverflow.com/users/6134390/peter-pohlmann"
+      },
+      "is_answered": false,
+      "view_count": 21,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1601300120,
+      "creation_date": 1601294514,
+      "last_edit_date": 1601300120,
+      "question_id": 64101801,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/64101801/xcode-12-preview-crashes-when-adding-firebase-sdk-swift-ui-2-0",
+      "title": "XCode 12 Preview Crashes when adding Firebase SDK Swift UI 2.0"
+    },
+    {
+      "tags": [
+        "android",
+        "firebase",
+        "crash",
+        "messaging",
+        "in-app"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 14353160,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/aa986222b724fe76b51598379b1fa9b4?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Suresh",
+        "link": "https://stackoverflow.com/users/14353160/suresh"
+      },
+      "is_answered": false,
+      "view_count": 15,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1601299066,
+      "creation_date": 1601279154,
+      "last_edit_date": 1601299066,
+      "question_id": 64097942,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/64097942/aapplication-getting-crash-when-user-click-on-firebase-in-app-messaging-popup-bu",
+      "title": "Aapplication getting crash when user click on Firebase In-App messaging popup button click which contain url in button action"
+    },
+    {
+      "tags": [
+        "android",
+        "firebase",
+        "push-notification",
+        "notifications",
+        "firebase-notifications"
+      ],
+      "owner": {
+        "reputation": 95,
+        "user_id": 4731367,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/417873428385141/picture?type=large",
+        "display_name": "Rimsha Butt",
+        "link": "https://stackoverflow.com/users/4731367/rimsha-butt"
+      },
+      "is_answered": false,
+      "view_count": 11,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1601298759,
+      "creation_date": 1601298759,
+      "question_id": 64102914,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/64102914/how-to-manage-firebase-notification-tray",
+      "title": "How to manage firebase notification tray?"
+    },
+    {
+      "tags": [
+        "firebase",
+        "google-cloud-firestore"
+      ],
+      "owner": {
+        "reputation": 65,
+        "user_id": 6105177,
+        "user_type": "registered",
+        "profile_image": "https://www.gravatar.com/avatar/2ccfbe59a9d74477573f34d21ca4892b?s=128&d=identicon&r=PG&f=1",
+        "display_name": "Henry Hargreaves",
+        "link": "https://stackoverflow.com/users/6105177/henry-hargreaves"
+      },
+      "is_answered": true,
+      "view_count": 40,
+      "accepted_answer_id": 64102878,
+      "answer_count": 1,
+      "score": -1,
+      "last_activity_date": 1601298613,
+      "creation_date": 1599050784,
+      "question_id": 63705840,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/63705840/firestore-emulator-how-to-generate-firebase-id-tokens",
+      "title": "Firestore Emulator: How to generate Firebase ID tokens?"
+    },
+    {
+      "tags": [
+        "firebase",
+        "flutter",
+        "dart",
+        "async-await",
+        "firebase-authentication"
+      ],
+      "owner": {
+        "reputation": 1,
+        "user_id": 14322518,
+        "user_type": "registered",
+        "profile_image": "https://lh5.googleusercontent.com/-EJdnQ0SG4io/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuck5pnFJ4Spx-b-axTfJD6ceIOXW5Q/photo.jpg?sz=128",
+        "display_name": "Serex App",
+        "link": "https://stackoverflow.com/users/14322518/serex-app"
+      },
+      "is_answered": true,
+      "view_count": 36,
+      "answer_count": 1,
+      "score": -1,
+      "last_activity_date": 1601298366,
+      "creation_date": 1601273807,
+      "last_edit_date": 1601273953,
+      "question_id": 64096873,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/64096873/flutter-app-stuck-at-splash-screen-not-moving-to-login-page-or-homepage",
+      "title": "Flutter App stuck at splash screen not moving to login page or homepage"
+    },
+    {
+      "tags": [
+        "node.js",
+        "firebase",
+        "authentication",
+        "firebase-authentication"
+      ],
+      "owner": {
+        "reputation": 17,
+        "user_id": 5891119,
+        "user_type": "registered",
+        "profile_image": "https://graph.facebook.com/594789794022028/picture?type=large",
+        "display_name": "Shubham Singh",
+        "link": "https://stackoverflow.com/users/5891119/shubham-singh"
+      },
+      "is_answered": false,
+      "view_count": 6,
+      "answer_count": 0,
+      "score": 0,
+      "last_activity_date": 1601297641,
+      "creation_date": 1601297641,
+      "question_id": 64102595,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/64102595/allow-only-valid-firebase-user-to-access-my-nodejs-api",
+      "title": "Allow only valid firebase user to access my Nodejs API"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 300,
+  "quota_remaining": 263
+}
