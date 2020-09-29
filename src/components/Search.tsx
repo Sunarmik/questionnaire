@@ -16,7 +16,7 @@ const Search: React.FC<ISearchProps> = ({ defaultValue, status, onChange }) => {
 
   useEffect(() => {
     onChange && onChange(value);
-  }, [value]);
+  }, [value, onChange]);
 
   return (
     <input
@@ -25,7 +25,7 @@ const Search: React.FC<ISearchProps> = ({ defaultValue, status, onChange }) => {
       defaultValue={defaultValue}
       onChange={(e) => debounced.callback(e.target.value)}
       type="text"
-      placeholder="Search topics"
+      placeholder="Search any topic"
     />
   );
 };

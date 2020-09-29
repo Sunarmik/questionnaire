@@ -64,11 +64,11 @@ main {
   width: 100%;
 }
 .searchbar {
-  padding: 20px;
+  padding: 10px 15px;
   margin: 20px;
   border-radius: 4px;
   width: 300px;
-  font-size: 18px;
+  font-size: 16px;
 }
 .infinite-scroll-component__outerdiv {
   width: 100%;

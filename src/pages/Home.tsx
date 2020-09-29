@@ -97,7 +97,6 @@ const Home: React.FC<IHomeProps> = () => {
   };
 
   const fetchMoreData = async () => {
-    console.log("fetching...");
     try {
       if (!searchTerm) {
         setQuestions([]);
@@ -105,6 +104,7 @@ const Home: React.FC<IHomeProps> = () => {
         setHasMore(false);
         return;
       }
+      questions.length === 0 && setStatus(RESPONSE_STATUS.LOADING);
       const data = await fetchQuestions<IQuestionsList>(searchTerm, page);
       setQuestions((prevQuestions) => {
         const combinedArray = prevQuestions.concat(data.items);
