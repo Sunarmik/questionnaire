@@ -11,6 +11,8 @@ export interface IQuestions {
   title?: string;
   creation_date?: number;
   question_id?: number;
+  link?: string;
+  body?: string;
 }
 
 export interface IQuestionsList {
