@@ -2,7 +2,8 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { useSnackbar } from "notistack";
 import React, { useEffect } from "react";
 import { RESPONSE_STATUS } from "../@types/common";
-import { IQuestions, IQuestionsList } from "../@types/IQuestions";
+import { IQuestions } from "../@types/IQuestions";
+import { fetchMoreData } from "../utils/common";
 import Questions from "./Questions";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -39,7 +40,6 @@ interface IQuestionListProps {
 
 const QuestionList: React.FC<IQuestionListProps> = ({
   searchTerm,
-  fetchQuestions,
   setQuestions,
   setStatus,
   setHasMore,
@@ -53,41 +53,22 @@ const QuestionList: React.FC<IQuestionListProps> = ({
   const classes = useStyles();
   const { enqueueSnackbar } = useSnackbar();
 
-  const fetchMoreData = async () => {
-    try {
-      if (!searchTerm) {
-        setQuestions([]);
-        setStatus(RESPONSE_STATUS.SUCCESS);
-        setHasMore(false);
-        return;
-      }
-      questions.length === 0 && setStatus(RESPONSE_STATUS.LOADING);
-      const data = await fetchQuestions<IQuestionsList>(searchTerm, page);
-      setQuestions((prevQuestions) => {
-        const combinedArray = prevQuestions.concat(data.items);
-        return combinedArray.filter(
-          (item, index) =>
-            combinedArray.findIndex(
-              (ques) => ques.question_id === item.question_id
-            ) === index
-        );
-      });
-      setStatus(RESPONSE_STATUS.SUCCESS);
-      setPage((prevPage) => prevPage + 1);
-      setHasMore(data.has_more);
-    } catch (error) {
-      setQuestions([]);
-      setStatus(RESPONSE_STATUS.ERROR);
-      setHasMore(false);
-      enqueueSnackbar(error.message, {
-        variant: "error",
-        preventDuplicate: true,
-      });
-    }
+  const loadMoreData = () => {
+    fetchMoreData(
+      searchTerm,
+      setQuestions,
+      setStatus,
+      setHasMore,
+      questions,
+      setPage,
+      enqueueSnackbar,
+      page
+    );
   };
 
   useEffect(() => {
-    fetchMoreData();
+    setQuestions([]);
+    loadMoreData();
   }, [searchTerm]);
 
   return (
@@ -104,7 +85,7 @@ const QuestionList: React.FC<IQuestionListProps> = ({
             </div>
           )}
           <Questions
-            fetchMoreData={fetchMoreData}
+            fetchMoreData={loadMoreData}
             handleListItemClick={handleListItemClick}
             hasMore={hasMore}
             questions={questions}

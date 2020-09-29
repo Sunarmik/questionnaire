@@ -3,20 +3,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import { queryCache, ReactQueryCacheProvider } from "react-query";
 import { SnackbarProvider } from "notistack";
 import { COMMON_APP_CONFIG } from "./constants/common";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReactQueryCacheProvider queryCache={queryCache}>
-      <SnackbarProvider
-        maxSnack={COMMON_APP_CONFIG.maxSnack}
-        hideIconVariant={true}
-      >
-        <App />
-      </SnackbarProvider>
-    </ReactQueryCacheProvider>
+    <SnackbarProvider
+      maxSnack={COMMON_APP_CONFIG.maxSnack}
+      hideIconVariant={true}
+    >
+      <App />
+    </SnackbarProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

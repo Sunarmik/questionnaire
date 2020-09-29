@@ -40,7 +40,7 @@ const QuestionDetails: React.FC<IQuestionDetailsProps> = ({
         open={open}
         onClose={handleClose}
         closeAfterTransition
-        BackdropComponent={Backdrop}
+        BackdropComponent={Backdrop} // Backdrop may show some warning as it is using old findDomNode api.
         BackdropProps={{
           timeout: 500,
         }}
@@ -52,6 +52,10 @@ const QuestionDetails: React.FC<IQuestionDetailsProps> = ({
               id="transition-modal-description"
               dangerouslySetInnerHTML={{ __html: selectedQuestion?.body || "" }}
             ></div>
+            <br />
+            <hr />
+            <br />
+            <br />
             <a rel="noreferrer nofollow" href={selectedQuestion?.link}>
               Click here to see the question on stackoverflow.
             </a>

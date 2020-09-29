@@ -33,6 +33,9 @@ main {
 .field {
   min-width: 15%;
   text-align: end;
+  line-height: 2;
+  border-bottom: 1px solid #efefef;
+  cursor: pointer;
 }
 .home__questions--author {
   flex: 1;
@@ -68,6 +71,7 @@ main {
 }
 #transition-modal-description p {
   overflow-wrap: break-word;
+  line-height: 2;
 }
 #transition-modal-description pre {
   white-space: pre-wrap;

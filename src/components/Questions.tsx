@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       width: "100%",
       alignItems: "baseline",
-      border: "1px solid #efefef",
+      border: "1px solid #8b8989",
       padding: "10px",
       overflow: "hidden",
       [theme.breakpoints.down("sm")]: {
@@ -49,6 +49,13 @@ const Questions: React.FC<IQuestionsProps> = ({
       next={fetchMoreData}
       hasMore={hasMore}
       loader={<h4>Loading...</h4>}
+      endMessage={
+        questions.length ? (
+          <p style={{ textAlign: "center" }}>
+            <b>Yay! You have seen it all</b>
+          </p>
+        ) : null
+      }
     >
       {questions.map((data) => (
         <div
