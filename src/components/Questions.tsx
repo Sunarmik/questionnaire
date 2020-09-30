@@ -1,7 +1,7 @@
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import React from "react";
-import InfiniteScroll from "react-infinite-scroll-component";
+import React, { useRef } from "react";
 import { IQuestions } from "../@types/IQuestions";
+import { useIntersectionObserver } from "../hook/useIntersectionObserver";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,6 +25,35 @@ const useStyles = makeStyles((theme: Theme) =>
     infiniteScroll: {
       width: "100%",
     },
+    questionTitle: {
+      display: "flex",
+      flex: 3,
+      marginRight: "1em",
+      justifyContent: "space-between",
+      width: "100%",
+    },
+    questionCreatedAt: {
+      display: "flex",
+      flex: 1,
+      justifyContent: "space-between",
+      width: "100%",
+      textAlign: "center",
+    },
+    questionAuthor: {
+      display: "flex",
+      flex: 1,
+      marginRight: "1em",
+      justifyContent: "space-between",
+      width: "100%",
+      textTransform: "capitalize",
+    },
+    questionField: {
+      minWidth: "15%",
+      textAlign: "end",
+      lineHeight: 2,
+      borderBottom: "1px solid #efefef",
+      cursor: "pointer",
+    },
   })
 );
 
@@ -42,41 +71,47 @@ const Questions: React.FC<IQuestionsProps> = ({
   handleListItemClick,
 }) => {
   const classes = useStyles();
+
+  const elementToBeObserved = useRef<HTMLDivElement>(null);
+
+  useIntersectionObserver({
+    targetElement: elementToBeObserved,
+    enabled: hasMore,
+    onIntersectHandler: fetchMoreData,
+  });
   return (
-    <InfiniteScroll
-      className={classes.infiniteScroll}
-      dataLength={questions.length}
-      next={fetchMoreData}
-      hasMore={hasMore}
-      loader={<h4>Loading...</h4>}
-      endMessage={
-        questions.length ? (
-          <p style={{ textAlign: "center" }}>
-            <b>Yay! You have seen it all</b>
-          </p>
-        ) : null
-      }
-    >
-      {questions.map((data) => (
-        <div
-          onClick={(e) => handleListItemClick(data.question_id!)}
-          className={classes.listItem}
-          key={data.question_id}
-        >
-          <div className="field home__questions--author">
-            <span className={classes.smallDevices}>Author: </span>
-            {data.owner?.display_name}
+    <>
+      {questions.map((data, i, arr) => {
+        const targetElementPosition = Math.abs(Math.floor(arr.length * 0.7));
+        return (
+          <div
+            ref={i === targetElementPosition ? elementToBeObserved : null}
+            onClick={(e) => handleListItemClick(data.question_id!)}
+            className={classes.listItem}
+            key={data.question_id}
+          >
+            <div
+              className={`${classes.questionField} ${classes.questionAuthor}`}
+            >
+              <span className={classes.smallDevices}>Author: </span>
+              {data.owner?.display_name}
+            </div>
+            <div
+              className={`${classes.questionField} ${classes.questionTitle}`}
+            >
+              <span className={classes.smallDevices}>Title: </span> {data.title}
+            </div>
+            <div
+              className={`${classes.questionField} ${classes.questionCreatedAt}`}
+            >
+              <span className={classes.smallDevices}>Created At: </span>{" "}
+              {data.creation_date &&
+                new Date(data.creation_date).toDateString()}
+            </div>
           </div>
-          <div className="field home__questions--title">
-            <span className={classes.smallDevices}>Title: </span> {data.title}
-          </div>
-          <div className="field home__questions--created-at">
-            <span className={classes.smallDevices}>Created At: </span>{" "}
-            {data.creation_date && new Date(data.creation_date).toDateString()}
-          </div>
-        </div>
-      ))}
-    </InfiniteScroll>
+        );
+      })}
+    </>
   );
 };
 

@@ -17,3 +17,14 @@ export type FetchMoreDataType = (
   enqueueSnackbar: (message: React.ReactNode, options?: OptionsObject | undefined) => React.ReactText,
   page: number
 ) => void;
+
+interface IntersectionArguments {
+  parentElement?: React.RefObject<HTMLDivElement>,
+  targetElement: React.RefObject<HTMLDivElement>,
+  onIntersectHandler: () => void,
+  intersectionThreshold?: number,
+  parentMargin?: string,
+  enabled: boolean;
+}
+
+export type UseIntersectionObserverType = (data: IntersectionArguments) => void;

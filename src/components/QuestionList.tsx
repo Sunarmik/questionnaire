@@ -8,6 +8,13 @@ import Questions from "./Questions";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    questionsList: {
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "space-evenly",
+      alignItems: "center",
+    },
     hideOnSmallDevices: {
       display: "flex",
       [theme.breakpoints.down("sm")]: {
@@ -20,6 +27,19 @@ const useStyles = makeStyles((theme: Theme) =>
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+    },
+    scrollableWrapperHeader: {
+      display: "flex",
+      justifyContent: "space-between",
+      width: "100%",
+      border: "1px solid #efefef",
+      "& > span": {
+        minWidth: "15%",
+        fontWeight: 600,
+      },
+      "& > span:first-child": {
+        paddingLeft: "30px",
+      },
     },
   })
 );
@@ -72,7 +92,7 @@ const QuestionList: React.FC<IQuestionListProps> = ({
   }, [searchTerm]);
 
   return (
-    <section className="home__questions">
+    <section className={classes.questionsList}>
       {status === "success" && (
         <div id="scrollableDiv" className={classes.scrollDiv}>
           {!!questions.length && (

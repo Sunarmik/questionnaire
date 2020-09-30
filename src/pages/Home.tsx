@@ -6,10 +6,26 @@ import "../styles/home.css";
 import QuestionDetails from "../components/QuestionDetails";
 import QuestionList from "../components/QuestionList";
 import { fetchQuestions } from "../utils/common";
+import { createStyles, makeStyles, Theme } from "@material-ui/core";
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    home: {
+      width: "100vw",
+      height: "auto",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      position: "relative",
+    },
+  })
+);
 
 interface IHomeProps {}
 
 const Home: React.FC<IHomeProps> = () => {
+  const classes = useStyles();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedQuestion, setSelectedQuestion] = useState<
     IQuestions | undefined
@@ -41,7 +57,7 @@ const Home: React.FC<IHomeProps> = () => {
   };
 
   return (
-    <div className="home">
+    <div className={classes.home}>
       <Search
         defaultValue={""}
         status={status}
@@ -49,7 +65,7 @@ const Home: React.FC<IHomeProps> = () => {
       />
       {status === "loading" && <p>Loading...</p>}
       {status === "success" && (
-        <main>
+        <main style={{ width: "100%" }}>
           <QuestionList
             fetchQuestions={fetchQuestions}
             handleListItemClick={handleListItemClick}
