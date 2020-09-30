@@ -17,6 +17,8 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     hideOnSmallDevices: {
       display: "flex",
+      width: "100%",
+      justifyContent: "space-between",
       [theme.breakpoints.down("sm")]: {
         display: "none",
       },
