@@ -82,6 +82,9 @@ const Questions: React.FC<IQuestionsProps> = ({
   return (
     <>
       {questions.map((data, i, arr) => {
+        /*
+        setting the 70th element as the observed element and trigger point to fetch more data. this gives better ux experience.
+        */
         const targetElementPosition = Math.abs(Math.floor(arr.length * 0.7));
         return (
           <div

@@ -1,7 +1,8 @@
-import { Backdrop, Fade, Modal } from "@material-ui/core";
+import { Backdrop, Fade, IconButton, Modal } from "@material-ui/core";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import React from "react";
 import { IQuestions } from "../@types/IQuestions";
+import CloseIcon from "@material-ui/icons/Close";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -15,6 +16,10 @@ const useStyles = makeStyles((theme: Theme) =>
       border: "2px solid #000",
       boxShadow: theme.shadows[5],
       padding: theme.spacing(2, 4, 3),
+    },
+    close: {
+      float: "right",
+      margin: "5px",
     },
   })
 );
@@ -47,6 +52,9 @@ const QuestionDetails: React.FC<IQuestionDetailsProps> = ({
       >
         <Fade in={open}>
           <div className={classes.paper}>
+            <IconButton onClick={handleClose} className={classes.close}>
+              <CloseIcon />
+            </IconButton>
             <h2 id="transition-modal-title">{selectedQuestion?.title}</h2>
             <div
               id="transition-modal-description"
