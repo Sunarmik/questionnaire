@@ -109,7 +109,7 @@ const Questions: React.FC<IQuestionsProps> = ({
             >
               <span className={classes.smallDevices}>Created At: </span>{" "}
               {data.creation_date &&
-                new Date(data.creation_date).toDateString()}
+                new Date(data.creation_date * 1000).toDateString()}
             </div>
           </div>
         );
